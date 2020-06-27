@@ -4,7 +4,7 @@
 
 - Python 3.6
 - NumPy
-- Pandas
+- Pandas (update you pandas to be able to read in the json files correctly)
 - Math
 - Machine Learning libraries such as Scikit-Learn model: LogisticRegression, RandomForestClassifier  and other Scikit-Learn components
 - XGBoost
@@ -29,36 +29,56 @@ Keep in mind as well that someone using the app might make a purchase through th
 In this project, we will be answering the following business questions:<br>
 1) Determine which demographic groups, i.e.age, gender and income groups, respond best to the offer types<br>
 2) Assess characteristics of the demographic groups who respond the least to offers<br>
-3) Build a model to determine what features affect a user's response to an offer<br>
+3) Build a model to predict what features affect a user's response to an offer<br>
 
 ## Project Components
+### Project Details 
 The data is contained in three files:
 
--portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)
--profile.json - demographic data for each customer
--transcript.json - records for transactions, offers received, offers viewed, and offers completed
--Here is the schema and explanation of each variable in the files:
+-portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)<br>
+-profile.json - demographic data for each customer<br>
+-transcript.json - records for transactions, offers received, offers viewed, and offers completed<br>
+
+Here is the schema and explanation of each variable in the files:
 
 **portfolio.json**
 
--id (string) - offer id
--offer_type (string) - type of offer ie BOGO, discount, informational
--difficulty (int) - minimum required spend to complete an offer
--reward (int) - reward given for completing an offer
--duration (int) - time for offer to be open, in days
--channels (list of strings)
+-id (string) - offer id<br>
+-offer_type (string) - type of offer ie BOGO, discount, informational<br>
+-difficulty (int) - minimum required spend to complete an offer<br>
+-reward (int) - reward given for completing an offer<br>
+-duration (int) - time for offer to be open, in days<br>
+-channels (list of strings)<br>
 
 **profile.json**
 
-age (int) - age of the customer
-became_member_on (int) - date when customer created an app account
-gender (str) - gender of the customer (note some entries contain 'O' for other rather than M or F)
-id (str) - customer id
-income (float) - customer's income
+-age (int) - age of the customer<br>
+-became_member_on (int) - date when customer created an app account<br>
+-gender (str) - gender of the customer (note some entries contain 'O' for other rather than M or F)<br>
+-id (str) - customer id<br>
+-income (float) - customer's income<br>
 
 **transcript.json**
 
-event (str) - record description (ie transaction, offer received, offer viewed, etc.)
-person (str) - customer id
-time (int) - time in hours since start of test. The data begins at time t=0
-value - (dict of strings) - either an offer id or transaction amount depending on the record
+-event (str) - record description (ie transaction, offer received, offer viewed, etc.)<br>
+-person (str) - customer id<br>
+-time (int) - time in hours since start of test. The data begins at time t=0<br>
+-value - (dict of strings) - either an offer id or transaction amount depending on the record<br>
+
+### File Description
+- Data zip folder contains the three datasets listed above<br>
+- Models folder contains the trained models in this project<br>
+- Notebook contains the python code used to execute this project<br>
+
+## Summary of the results
+In summary, here are the insights from the data which answers to the business questions:-
+
+- The 40-60 age range, Male, and the 40-60K income range respond best to offers<br>
+- BOGO was the most significant offer type that determined the success of an offer<br>
+- The total amount of a transaction plays a key role in determining whether a customer responds to an offer or not<br>
+- Social media was the most significant channel that determined the success of an offer<br>
+- The minimum required spend to complete an offer and membership days also determines the success of an offer<br>
+- The <20 age range, Female and the 100+K income range respond the least to offers<br>
+
+##  Acknowledgements
+This project was completed by me as part of the Udacity Data Scientist Nanodegree. Code templates and training were provided by Udacity. The data was originally sourced by Udacity from Starbucks. For more details about this project, visit [my blog post.](https://medium.com/@thanksgivingtogod94/how-can-starbucks-determine-the-effectiveness-of-their-campaign-offers-bb3e0375833e)
