@@ -81,4 +81,4 @@ In summary, here are the insights from the data which answers to the business qu
 - The <20 age range, Female and the 100+K income range respond the least to offers<br>
 
 ##  Acknowledgements
-This project was completed by me as part of the Udacity Data Scientist Nanodegree. Code templates and training were provided by Udacity. The data was originally sourced by Udacity from Starbucks. For more details about this project, visit [my blog post.](https://medium.com/@thanksgivingtogod94/how-can-starbucks-determine-the-effectiveness-of-their-campaign-offers-bb3e0375833e)
+This project was completed by me as part of the Udacity Data Scientist Nanodegree. Code templates and training were provided by Udacity. The data was originally sourced by Udacity from Starbucks. For more details about this project, visit [my blog post.](https://medium.com/@thanksgivingtogod94/how-can-starbucks-determine-the-effectiveness-of-their-campaign-offers-2b6b04e8aba8)
